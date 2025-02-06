@@ -152,11 +152,15 @@ async function saveTextAsZippedXml(text, filename) {
   
     
       executeButton.addEventListener('click', function() {
-        console.log("CLICK");
+        
+        quiz_name = document.getElementById('quiz_name').innerText;
+        if (quiz_name === '') {
+            alert("Please specify the quiz name");
+            return;
+        }
         const js_text = getTextareaAsJSON();
-        const qtiOutput = convertJsonToQTI(js_text, "FEB 6 QUIZ");
+        const qtiOutput = convertJsonToQTI(js_text, quiz_name);
   
-        // navigator.clipboard.writeText(qtiOutput);
         saveTextAsZippedXml(qtiOutput, "quiz.zip");
       });
     });

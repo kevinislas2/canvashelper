@@ -1,7 +1,9 @@
 <html>
+
 <head>
     <script src="js/jszip.js"></script>
 </head>
+
 <body>
     <h1>JSON to Canvas</h1>
     <h2>Instructions</h2>
@@ -9,11 +11,20 @@
         Paste the json here so we can process it and generate a Canvas quiz.<br>
         Import the quiz to Canvas</p>
     <h2>Sample query</h2>
-    <p>I am an English teacher. I need a quiz for my students to practice future forms (will, going to, present continuous). <br>The quiz should have 15 questions, each should be multiple choice and each with a single correct answer.
+    <p>I am an English teacher. I need a quiz for my students to practice future forms (will, going to, present
+        continuous). <br>The quiz should have 15 questions, each should be multiple choice and each with a single
+        correct answer.
         <br>
         The quiz should be in the following json format:
-        
-        [q: "What color is the sky", answers: ["blue", "red"], correct_answer: 0]</p>
+
+        [q: "What color is the sky", answers: ["blue", "red"], correct_answer: 0]
+    </p>
+
+    <label for="quiz_name">Quiz name:</label>
+
+    <input type="text" id="quiz_name" name="quiz_name" required minlength="1" maxlength="30" size="10" />
+    <br>
+
     <label for="story">Input Gemini response:</label><br>
     <textarea id="story" name="story" rows="5" cols="33"></textarea><br>
     <button id="myButton">Download quiz as QTI</button>
