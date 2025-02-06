@@ -153,7 +153,7 @@ async function saveTextAsZippedXml(text, filename) {
     
       executeButton.addEventListener('click', function() {
         
-        quiz_name = document.getElementById('quiz_name').innerText;
+        quiz_name = document.getElementById('quiz_name').value;
         if (quiz_name === '') {
             alert("Please specify the quiz name");
             return;
